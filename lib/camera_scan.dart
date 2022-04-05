@@ -1,6 +1,3 @@
-
-
-
 // class CameraScan {
 //   static const MethodChannel _channel = MethodChannel('camera_scan');
 //
@@ -10,6 +7,8 @@
 //   }
 // }
 
+import 'dart:core';
+import 'dart:core';
 import 'dart:io';
 import 'dart:async';
 
@@ -67,16 +66,20 @@ class CameraScan {
     return await Navigator.push<File>(
         context,
         MaterialPageRoute(
-            builder: (_) => PdfGeneratotGallery(launchWrapper, labelsConfig)));
+            builder: (_) => PdfGeneratotGallery(launchWrapper, labelsConfig))
+        );
   }
 
+  // Future.delayed(Duration.zero, () async {
+  //   PdfGeneratotGallery(launchWrapper, labelsConfig);
+  // });
   /// Scanner to get single scanned image
   ///
   /// `context` : BuildContext to attach source selection
   /// `source` : Either ScannerFileSource.CAMERA or ScannerFileSource.GALLERY
   /// `androidConfigs` : Android scanner labels configuration
   static Future<File?>? launch(BuildContext context,
-      {ScannerFileSource? source,
+      {ScannerFileSource? source = ScannerFileSource.CAMERA,
         Map<dynamic, String> labelsConfig = const {}}) {
     if (source != null) {
       return _scanDocument(source, labelsConfig);

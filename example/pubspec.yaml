@@ -19,6 +19,7 @@ dependencies:
     sdk: flutter
 
   advance_pdf_viewer: ^2.0.1
+  auto_size_text: ^3.0.0
   camera_scan:
     # When depending on this package from a real application you should use:
     #   camera_scan: ^x.y.z

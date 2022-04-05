@@ -51,7 +51,8 @@ class _PdfGeneratotGalleryState extends State<PdfGeneratotGallery> {
       File("${tempDir.path}/${DateTime.now().millisecondsSinceEpoch}.pdf");
       await file.writeAsBytes(await pdf.save());
       Navigator.of(context).pop(file);
-    } catch (e) {
+    }
+    catch (e) {
       String message = "Unkown Error";
       if (e is FileSystemException) {
         message = e.osError?.message ?? 'File System Error';
