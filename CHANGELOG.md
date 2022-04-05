@@ -1,3 +1,3 @@
-## 0.0.2
+## 0.0.3
 
-Run under Android.
+Change dependency pubspec.yaml

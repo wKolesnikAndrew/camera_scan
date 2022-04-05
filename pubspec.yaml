@@ -1,6 +1,6 @@
 name: camera_scan
 description: A Flutter plugin for make camera snapshots.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/wKolesnikAndrew/camera_scan
 
 environment:
