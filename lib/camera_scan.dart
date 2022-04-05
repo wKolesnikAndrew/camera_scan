@@ -48,6 +48,7 @@ class CameraScan {
 
       var v = await platformVersion;
       print("version: $v");
+      print("path: $path");
       return File(path);
     }
   }
